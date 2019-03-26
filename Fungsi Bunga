@@ -1,0 +1,20 @@
+#num=pilihan 1 bunga tunggal, dan 2 bunga majemuk
+#k=modal
+#i=bunga(desimal)
+#t=waktu (tahun)
+#m=banyaknya bunga dalam satu th
+Bunga<-function(num,At,k,t,m=TRUE){
+  switch(num,
+         satu={
+           bunga=(At/k-1)/t
+         },
+         dua={
+           bunga=(At/k)^(1/t)-1
+         },
+         tiga={
+           bunga=m*((At/k)^(1/(m*t))-1)
+         },
+         empat={
+           bunga=log(At/k)/t
+         })
+return(bunga)}
