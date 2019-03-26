@@ -1,0 +1,19 @@
+presentvalue<-function(num,At,i,t, m=TRUE){
+switch(num,
+         satu={
+           Pv= At/(1+i*t)
+         cat("Present Value Bunga Tunggal:", Pv)
+         },
+         dua={
+           Pv= At/((1+i)^t)
+         cat("Present Value Bunga Majemuk Biasa:", Pv)
+         },
+         tiga={
+           Pv= At/((1+i/m)^(m*t))
+         cat("Present Value Bunga Majemuk nominal:", Pv)
+         },
+         empat={
+           Pv= At*exp(-i/m*t)
+         cat("Present Value Bunga Majemuk Kontinu:", Pv)
+         })
+return(Pv)}
